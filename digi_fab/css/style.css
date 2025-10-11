@@ -27,13 +27,20 @@ html, body {
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #efefef;
+	background:linear-gradient(270deg, #dbe6fb, #c5796b);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+}
+@keyframes gradientMove {
+    0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
 }
 h1{
     text-indent: 0em;
 }
 h2{
-    margin-left: 1em;
+    margin-left: 0em;
     margin-top: 1em;
 }
 h3{
