@@ -27,7 +27,14 @@ html, body {
 	color: #e55f5f;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #a1c3a892;
+	background:linear-gradient(270deg, #f0f4f8, #d9E2ec);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+}
+@keyframes gradientMove {
+    0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
 }
 h1{
     text-indent: 0em;
