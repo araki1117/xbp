@@ -1,4 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゆうさく｜確率減少ゲーム</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00f5d4, #00bbf9, #9b5de5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      color: #00f5d4;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    footer {
+  text-align: center;
+  margin-top: 3em;
+  color: #666;
+  padding-bottom: 2em;
+  font-size: 20px;  
+  font-weight: bold; 
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
+
+<body>
+  <header>
+    <h1>確率減少ゲーム</h1>
+    <p>～あなたの運を試そう～</p>
+  </header>
+
+  <section class="container">
+    <div class="card">
+      <h2>🎮 ゲーム説明</h2>
+      <p>「確率減少ゲーム」は、問題を重ねるごとに勝率が下がるゲームです。運と直感、どちらを信じるかはあなた次第です。</p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ 確率</h2>
+      <p>最初の選択肢は90%。<br>次の選択では72%。<br>最後の確率は、わずか0.0363%<br></p>
+    </div>
+
+    <div class="card">
+      <h2>🌌 課題点</h2>
+      <p>下の通りコードがすごく長くなってしまった。答え合わせのつもりでチャットGPTに<br>聞いたらもっと短いコードで出来たためこれからに活かしたい。</p>
+    </div>
+
+    
+  </section>
+  <section class="container">
+    <div class="card">
+      <h2>💻 ソースコード</h2>
+      <pre><code>
+        import time
+while True: 
+
+    print("========== 確率減少ゲーム ==========")
+    print("\n")
+    name=input ("名前を教えて下さい")
+
+    print(name, "さん、ようこそ確率減少ゲームへ")
+    time.sleep(2)
+    print("\n\n")
+
+    number=int(input("1から10で好きな数字を選んでね"))
+    time.sleep(2)
+    print("\n\n")
+
+
+    if 1 <= number <= 10:
+
+        print("あなたの選んだ数字は", number,"ですね！")
+
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+        print("\n\n")
+    if number==5:
+        print("残念！逆にすごいね、、、")
+        break
+        
+    else:
+        print("おめでとう10/9の確率を当てたよ！、まあさすがにね")
+
+        time.sleep(2)
+        print("\n\n")
+
+        print("次ははずれが２つになるよ!")
+        time.sleep(2)
+        print("\n\n")
+
+        number=int(input("1から10で好きな数字を選んでね"))
+        print()
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        break
+    if number in[2,5]:
+        print("残念！どんまい！")
+        break
+
+    if number not in [2,5]:
+       print("おめでとう！次に進もう")
+       print("\n\n")
+       time.sleep(2)
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[3,7,9]:
+        print("残念！どんまい！")
+        break
+
+    if number not in[3,7,9]:
+       print("おめでとう！ナイスだ！")
+       print("\n\n")
+       time.sleep(2)
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[3,5,9,10]:
+        print("残念！切り替えよう")
+        break
+
+    if number not in[3,5,9,10]:
+       print("おめでとう！いい調子！")
+       time.sleep(2)
+       print("\n\n")
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+       time.sleep(2)
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[2,3,5,7,8]:
+        print("残念！あと1問で半分だったね")
+        break
+
+    if number not in[2,3,5,7,8]:
+       print("おめでとう！えぐい、半分じゃん")
+       time.sleep(2)
+       print("\n\n")
+
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+       time.sleep(2)
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        time.sleep(2)
+        print("\n\n")
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[1,4,6,7,9,10]:
+        print("残念！また挑戦してね")
+        break
+
+    if number not in[1,4,6,7,9,10]:
+        print("おめでとう！このままの調子で！")
+        time.sleep(2)
+        print("\n\n")
+
+        number=int(input("1から10で好きな数字を選んでね"))
+        print("\n")
+        time.sleep(2)
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[2,3,5,6,8,9,10]:
+        print("残念！あと少しだったね")
+        break
+
+    if number not in[2,3,5,6,8,9,10]:
+       print("おめでとう！あと2問だ！")
+       print("\n\n")
+       time.sleep(2)
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+       time.sleep(2)
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+        print(name,"さん、その数字は選べないよ！")
+        time.sleep(2)
+        break
+
+    if number in[1,2,3,4,5,6,7,8]:
+        print("残念！惜しい！、あと1問だったのに！")
+        break
+
+    if number not in[1,2,3,4,5,6,7,8]:
+       print("おめでとう！次で最後だ！")
+       time.sleep(2)
+       print("\n\n")
+
+       number=int(input("1から10で好きな数字を選んでね"))
+       print()
+       time.sleep(2)
+
+    if 1 <= number <= 10:
+        print("あなたの選んだ数字は", number,"ですね！")
+        print("\n\n")
+        time.sleep(2)
+    else:
+      print(name,"さん、その数字は選べないよ！")
+      time.sleep(2)
+      break
+
+    if number in[1,2,3,4,6,7,8,9,10]:
+        print("・・・・・・・・・・・")
+        time.sleep(2)
+        print("残念！めちゃくちゃ惜しかった！")
+        break
+
+    else:
+        print("・・・・・・・・・・・")
+        time.sleep(2)
+        print("すごい！おめでとう！今すぐ宝くじ買った方がいいよ！！！")
+        print("\n\n")
+        time.sleep(2)
+        print("遊んでくれてありがとう！")
+        break
+
+        </code></pre>
+</div>
+<footer>
+作：荒木悠作
+  </footer>
+</body>
+</html>
+
+
