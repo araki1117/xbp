@@ -1,8 +1,160 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <title>ゆうさく　レーザーカット</title>
-    <link rel="stylesheet" href="./css/2.css">
+  <meta charset="UTF-8">
+  <title>ゆうさく｜レーザーカット</title>
+  <style>
+    /* ======== 全体 ======== */
+    body {
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      background-color: #f8f4ee;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    /* ======== ヘッダー ======== */
+    header {
+      background: linear-gradient(90deg, #8d6e63, #a1887f);
+      color: #fff;
+      text-align: center;
+      padding: 3em 0 2em 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      margin: 0;
+      font-family: "Caveat", cursive;
+    }
+
+    /* ======== メイン ======== */
+    main {
+      max-width: 950px;
+      margin: 3em auto;
+      background: #fff8f0;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 2.5em;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    h2 {
+      color: #6d4c41;
+      border-left: 6px solid #a1887f;
+      padding-left: 12px;
+      margin-bottom: 1em;
+      font-size: 1.4em;
+    }
+
+    /* ======== 写真ギャラリー ======== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2em;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ======== ファイルリンク ======== */
+    .file-link a {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.9em 1.5em;
+      background: #a1887f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .file-link a:hover {
+      background: #8d6e63;
+      transform: translateY(-2px);
+    }
+
+    /* ======== フッター ======== */
+    footer {
+      text-align: center;
+      padding: 2em 0;
+      background: #5d4037;
+      color: #fff;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+
+    /* ======== スマホ対応 ======== */
+    @media (max-width: 700px) {
+      main {
+        padding: 1.5em;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
 </head>
-<h1>レーザーカット</h1>
-<
+<body>
+  <header>
+    <h1>レーザーカット</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>作品の紹介</h2>
+      <p>
+        サッカーを通じて感じた感情を花で表したコースターです。
+        上の花びらは気分が上がっている「喜び」右の花びらは「情熱、熱さ」左の花びら馬鹿なことで笑い合った「笑顔、笑い」
+        右下は歯を食いしばった「悔しさ」左下は自分の結果や実力への「不安、悲しさ」を渦巻で表しました。
+        ＊カメラの不具合で緑がかっています。
+      </p>
+    </section>
+
+    <section class="gallery">
+      <img src="../images/IMG_7224.jpg" alt="作品写真1">
+      <img src="../images/IMG_7242.jpg" alt="作品写真2">
+      <img src="../images/IMG_7225.jpg" alt="作品写真3">
+      <img src="../images/IMG_7226.jpg" alt="作品写真4">
+    </section>
+
+    <section class="file-link">
+      <h2>作品ファイル</h2>
+      <a href="../digi_fab/files/デジファブ　課題　花びらコースター.dxf">設計ファイル</a>
+    </section>
+
+    <section class="process">
+      <h2>制作プロセスでの気づき</h2>
+      <p>
+        木材のカットだけならFusionのままでいいが自分は彫りもあったためイラストレーターで行った。
+        色分けで機械にカットする場所と掘る場所を指示する。線の太さも変えられる。いらないなと思った線も消せる。
+      </p>
+      <p>
+        カットの工程でミスがあり思い通りのカットができませんでしたが、それはそれで面白く自分らしいので逆に気に入っています。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    作：荒木悠作
+  </footer>
+</body>
+</html>
