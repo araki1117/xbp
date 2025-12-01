@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ゆうさく｜テキストマイニング</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #f0c674;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 850px;
+            justify-items: center;
+        }
+
+        .photo-card {
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            padding: 10px;
+            width: 400px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .photo-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .comment {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .comment input {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 1em;
+            background-color: #3e3e3e;
+            color: #e0e0e0;
+        }
+
+        .comment input::placeholder {
+            color: #b0b0b0;
+        }
+
+        .feedback {
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            padding: 20px;
+            width: 850px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            margin-top: 40px;
+        }
+
+        .feedback textarea {
+            width: 100%;
+            height: 150px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 1em;
+            resize: none;
+            background-color: #3e3e3e;
+            color: #e0e0e0;
+        }
+
+        .feedback textarea::placeholder {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+<body>
+    <h1>テキストマイニング｜万博への社会の声調査</h1>
+
+    <div class="gallery">
+        <div class="photo-card">
+            <img src="../images/スクリーンショット 2025-11-30 170647.png" alt="写真1">
+            <div class="comment"><input type="text" placeholder="単語を制限したかったが不具合で出来ず"></div>
+        </div>
+        <div class="photo-card">
+            <img src="../images/スクリーンショット 2025-11-30 171010.png" alt="写真2">
+            <div class="comment"><input type="text" placeholder="「円」「費」のような金銭面を気にしている"></div>
+        </div>
+        <div class="photo-card">
+            <img src="../images/スクリーンショット 2025-11-30 171140.png" alt="写真3">
+            <div class="comment"><input type="text" placeholder="「来場」など来場者数を気にしている"></div>
+        </div>
+        <div class="photo-card">
+            <img src="../images/スクリーンショット 2025-11-30 171218.png" alt="写真4">
+            <div class="comment"><input type="text" placeholder="建設費や経済効果など開催への「影響」を気にしている"></div>
+        </div>
+        <div class="photo-card">
+            <img src="../images/スクリーンショット 2025-11-30 171346.png" alt="写真5">
+            <div class="comment"><input type="text" placeholder="数は少ないが目標について書かれている"></div>
+        </div>
+        
+    </div>
+
+    <div class="feedback">
+        <h2>調べてみての気づき</h2>
+        <textarea placeholder="グループでは万博の開催前と開催後の社会の声の違いについて調べた。思うようにコードが実行されずいらない単語も表示されてしまったが、共起ネットワークから見つけた発見もあった。それは好意的な意見より懸念する意見が多かったこと。抽出できた言葉は多くなかったが建設費用や経済効果の「金銭面」について気にする声、それに付随して来場者数やチケットの単語も抽出できた。直接的な結果は出なかったが今回調べた2024年10月13日～12月13日は、まだ懸念する意見の方が多かった。"></textarea>
+    </div>
+
+</body>
+</html>
