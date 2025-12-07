@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ゆうさく・design for others 作品</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: #f3f6ff;
+    color: #2a2a2a;
+}
+
+/* 全体コンテナ */
+.wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* セクションタイトル */
+.section-title{
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    border-left: 8px solid #4a77ff;
+    padding-left: 0.5em;
+    color: #2e3a75;
+}
+
+/* カード共通 */
+.card{
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(80,110,255,0.15);
+}
+
+/* 完成品写真 */
+.main-photo{
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    margin-top: 15px;
+}
+
+/* 設計写真（横並び） */
+.design-area{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.design-photo{
+    width: 48%;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+/* リスト（使用機材など） */
+ul{
+    padding-left: 1.3em;
+    margin: 0.4em 0 0;
+}
+
+/* 他メンバーリンク */
+.member-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.member-link{
+    flex: 1 1 calc(33% - 15px);
+    min-width: 160px;
+    text-align: center;
+    background: #e7ecff;
+    color: #2a2a2a;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    border: 2px solid transparent;
+}
+
+.member-link:hover{
+    background: #ffffff;
+    border-color: #4a77ff;
+    color: #4a77ff;
+}
+</style>
+</head>
+
+<body>
+    <!-- 大きな見出し -->
+<header class="main-header">
+    <h1>音漏れしてますよって言いずらいよね</h1>
+</header>
+
+<div class="wrapper">
+
+    <!-- 課題説明 -->
+    <div class="card">
+        <h2 class="section-title">取り組んだ課題</h2>
+        <p>
+            最初は文化祭時で見た、鈴木鈴木のキャッチをしていた人をテーマにしましたが難しかったため変更しました。<br>
+            そして電車で音漏れしている人をテーマに考えることにしました。みなさん音漏れしている人がいたらどうしますか？
+            多くの人が迷惑でも直接言いづらいのではないでしょうか。わざわざ声をかけて「音漏れしていますよ」というの勇気がいるし
+            声を変えられた人も恥ずかしかったり、小さな問題ですが難しい問題です。そのため私たちのグループはどうやったら簡単に
+            音漏れしていることを伝えられるのか考えてみました。
+        </p>
+    </div>
+
+    <!-- 完成品写真 -->
+    <div class="card">
+        <h2 class="section-title">完成品・音漏れ注意の指ケース</h2>
+
+        <img src="../images/IMG_7336.jpg" width=30%><br>
+        <h3 style="margin-top:1em; font-weight:600;">作品の説明</h3>
+        <p>
+            自分が作ったのは「音漏れ注意の指ケース」です。
+            直接言えないのなら何か見せることが必要だと考え、声に出さずに済むこの作品を作りました。
+            これを使うことによって座っている状況で隣の人が音漏れをしていた場合、手を見せ近づければ相手に気付かせることができます。
+            また、左右の手でも使えるためどんな状況でも使うことができます。
+        </p>
+    </div>
+
+    <!-- 使用機材 -->
+    <div class="card">
+        <h2 class="section-title">使用機材</h2>
+        <ul>
+            <li>3Dプリンター</li>
+            
+        </ul>
+    </div>
+
+    <!-- 使用素材 -->
+    <div class="card">
+        <h2 class="section-title">使用素材</h2>
+        <ul>
+            <li>素材 1</li>
+           
+        </ul>
+    </div>
+
+    <!-- 設計の写真2枚 -->
+    <div class="card">
+        <h2 class="section-title">設計の様子</h2>
+
+        <div class="design-area">
+            <img src="../images/スクリーンショット 2025-12-07 154826.png" class="design-photo" alt="">
+            <img src="../images/スクリーンショット 2025-12-07 154358.png" class="design-photo" alt="">
+        </div>
+    </div>
+
+    <!-- 他メンバーへのリンク -->
+    <div class="card">
+        <h2 class="section-title">他のメンバーの作品</h2>
+
+        <div class="member-links">
+            <a href="https://r202501907vl-jindai.github.io/xbp/digi_fab/dg4.html" class="member-link">ぶち</a>
+            <a href="https://sites.google.com/view/nishikun/%E3%83%9B%E3%83%BC%E3%83%A0" class="member-link">にしくん</a>
+            <a href="URL3" class="member-link">そーいち</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
