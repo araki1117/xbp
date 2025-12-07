@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ゆうさく — インタビュー</title>
+  <style>
+    :root{ --bg:#f7f8fb; --card:#ffffff; --accent:#2b6cb0; --muted:#6b7280 }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif; background:var(--bg); margin:0; padding:24px}
+    .container{max-width:960px;margin:0 auto}
+    h1{font-size:1.6rem;margin:0 0 16px;color:var(--accent)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(11,22,40,0.06)}
+    .section-title{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+    ul{margin:0;padding-left:1.1rem;color:#111827}
+    li{margin:8px 0}
+    .hint{font-size:0.85rem;color:var(--muted);margin-top:12px}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>昔（街・建物） と 本人（人生経験） — インタビュー項目</h1>
+
+    <div class="grid">
+      <section class="card" id="mukashi">
+        <div class="section-title">
+          <span class="dot"></span>
+          <strong>昔（街・建物・場所）</strong>
+        </div>
+        <ul>
+          <!-- ここに『昔』に関する項目を追加・編集してください -->
+          <li>港のある街として船や外国文化を身近に感じることはありましたか？</li>
+          <li>昔の横浜は今のように人が多く栄えてましたか？</li>
+          <li>1964年東京オリンピックの時の街の雰囲気はどうでしたか？</li>
+          <li>市電廃止で街の雰囲気など変わったと感じたことはありましたか？</li>
+          <li>今はもうなくなった建物の中で「好きだった」「よく行っていた」場所はありますか？</li>
+          <li>今と昔の横浜で、どちらが好きですか？</li>
+        </ul>
+      </section>
+
+      <section class="card" id="honnin">
+        <div class="section-title">
+          <span class="dot" style="background:#ea580c"></span>
+          <strong>本人（人生の歩み）</strong>
+        </div>
+        <ul>
+          <!-- ここに『本人』に関する項目を追加・編集してください -->
+          <li>子供時代はどのような子供でしたか？</li>
+          <li>若いころにはやっていたことはありますか？</li>
+          <li>人生で一番の自慢はありますか？</li>
+          <li>人生で一番の後悔はありますか？</li>
+          <li>大切にしている考え方、価値観はありますか？</li>
+          <li>人生の先輩として、何か、我々へアドバイスなどはありますか？</li>
+          <li>これからの目標などはありますか？</li>
+        </ul>
+      </section>
+    </div>
+
+    <p style="margin-top:18px;color:var(--muted);font-size:0.9rem"></p>
+  </div>
+</body>
+</html>
