@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ゆうさく｜最終課題</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: radial-gradient(circle at top, #ff4500, #8b0000, #000);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, #ff0000, #ff8c00);
+      box-shadow: 0 0 30px rgba(255, 100, 0, 0.8);
+    }
+
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #fff, 0 0 30px #ff0;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 80, 0, 0.6);
+    }
+
+    h2 {
+      border-left: 6px solid #ff4500;
+      padding-left: 12px;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    p, li {
+      line-height: 1.8;
+    }
+
+    .photos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .photos img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 120, 0, 0.8);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    }
+
+   textarea {
+  width: 100%;
+  height: 150px;
+  background: #111;
+  color: #fff;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .youtube-shorts {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.youtube-shorts iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🔥 BURNING PASSION 🔥</h1>
+    <p>情熱とエネルギーを形にしたデザイン</p>
+  </header>
+
+  <section>
+    <h2>作った理由</h2>
+    <p>
+     最終課題ということもあり筋トレに役立つものが欲しいなと考え作りました。
+     また購入する費用も軽減され、自分で作ることで愛着が沸くと思い作りました。
+    </p>
+  </section>
+
+  <section>
+    <h2>写真</h2>
+    <div class="photos">
+      <img src="../images/IMG_7431.jpg" alt="作品写真1">
+      <img src="../images/IMG_7432.jpg" alt="作品写真2">
+    </div>
+  </section>
+
+  <section>
+    <h2>使用したもの</h2>
+    <ul>
+      <li>3Dプリンター</li>
+    </ul>
+  </section>
+
+ <section>
+  <h2>YouTube動画</h2>
+  <div class="youtube-shorts">
+    <iframe
+      src="https://www.youtube.com/embed/V3Y94RD4Rqc?si=iQeeSt4FsS9jkjmT"
+      title="YouTube Shorts"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+  <section>
+    <h2>感想</h2>
+    <textarea id="commentBox" placeholder="絶対に壊れないようにしたかったため密度を100％にしました。思ったより時間がかかり失敗が許されない状況に自分で追い込んでしまったのが反省点。持ち手と支えるブロックは分けて制作したが合体するときに誤差が出てしまい結局やすりで削ったことも反省点。おじいちゃん電動やすりで削ってくれてありがとう。毎日使って筋トレ頑張りたいと思います！"></textarea>
+
+  </section>
+
+  <script>
+  const textarea = document.getElementById("commentBox");
+
+  function adjustFontSize() {
+    let maxFontSize = 48;
+    let minFontSize = 14;
+
+    textarea.style.fontSize = maxFontSize + "px";
+
+    while (
+      (textarea.scrollHeight > textarea.clientHeight ||
+       textarea.scrollWidth > textarea.clientWidth) &&
+      maxFontSize > minFontSize
+    ) {
+      maxFontSize--;
+      textarea.style.fontSize = maxFontSize + "px";
+    }
+  }
+
+  textarea.addEventListener("input", adjustFontSize);
+  window.addEventListener("load", adjustFontSize);
+</script>
+
+
+  <footer>
+    © 2026 Yusaku yoiitinennisimashou Project
+  </footer>
+
+</body>
+</html>
