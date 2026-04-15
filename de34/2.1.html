@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ゆうさく｜Arduinoの基本</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.8;
+    background-color: #f5f5f5;
+}
+
+h1{
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+h2{
+    border-left: 6px solid #222;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+.section{
+    background: white;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+ul{
+    margin-left: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Arduinoに関する学習まとめ</h1>
+
+<div class="section">
+<h2>結論</h2>
+<p>
+授業を通して、光と動きは単なる出力ではなく、プログラムによって制御される「表現手段」であることを理解した。
+特に、入力・処理・出力の構造を用いることで、環境やユーザーの行動に応じたインタラクティブなデザインが可能であると学んだ。
+</p>
+</div>
+
+<div class="section">
+<h2>ArduinoでLチカ</h2>
+<p>
+LEDの長い方が＋（アノード）　短い方が－（カソード）
+ブレッドボードにLEDを刺し＋は13番ピン、－はGNDにつなげる。
+※刺した列と同じ列に配線を刺さなければならない
+</p>
+
+<p>
+<strong>感想</strong><br>
+刺す場所とつなげる場所を間違えると光らないため失敗が分かりやすく学びやすかった。
+</p>
+</div>
+
+<div class="section">
+<h2>Arduinoで明るさを測定</h2>
+<p>
+CdSsセル=センサーにより、暗いところでは光り、明るいところでは消える
+シリアルモニタで明るさの数値が出る。コードで数値を変更すれば点灯するしないの条件を変えられる。
+</p>
+<strong>配線例</strong><br>
+<img src="../images/Arduinoで明るさ測定　配線例画像.avif"width=40%><br>
+            
+
+
+<p>
+<strong>感想</strong><br>
+明るさの度合いによって光るか消えるか設定できるため製品によっては電気をつける手間がかからないものを作れそう。
+自分の家の空気清浄機は明るいとライトが点き、暗いと消えるため逆の製品も作れることが分かった。
+</p>
+</div>
+
+<div class="section">
+<h2>ArduinoでNeoPixelを動かす</h2>
+<p>
+NeoPixel=フルカラーのLED 
+5つのLEDを色、光るタイミング、間隔、光量を設定できる。
+</p>
+
+
+<p>
+<strong>感想</strong><br>
+LEDの設定を細かく指定できるため複雑なものから簡易的なものまで自分の意図に合った設計がしやすいと感じた。
+ライブの演出などに多く使われているため原理を理解できてよかった。
+</p>
+</div>
+
+<div class="section">
+<h2>まとめ</h2>
+<p>
+授業を通して、光と動きはプログラムによって変化できるものであり、
+それらを組み合わせることで表現の幅が大きく広がることを理解した。
+また、単に動作させるだけでなく、「どのように変化させるか」を設計することが、
+自分自身の技術を高める上で重要であると感じた。
+</p>
+</div>
+
+</body>
+</html>
