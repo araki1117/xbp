@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Flaskまとめ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f5f6fa;
+      color: #2f3640;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00a8ff, #9c88ff);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      border-left: 6px solid #00a8ff;
+      padding-left: 10px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    code {
+      display: block;
+      background: #f1f2f6;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #00a8ff;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #eaf7ff;
+      padding: 15px;
+      border-left: 5px solid #00a8ff;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #2f3640;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #00a8ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Flaskまとめ</h1>
+  <p>基本理解とコード例</p>
+</header>
+
+<div class="container">
+
+  <div class="box">
+    <span class="tag">① 基本</span>
+    <h2>Flaskとは</h2>
+    <p>
+      FlaskはPythonでWebアプリケーションを作成するための軽量なフレームワークである。
+      必要最低限の機能のみを持ち、シンプルで分かりやすい構造が特徴で、
+      初心者でも扱いやすい。
+    </p>
+  </div>
+
+  <div class="box">
+    <span class="tag">② 特徴</span>
+    <h2>Flaskの特徴</h2>
+    <ul>
+      <li>軽量でシンプルな設計</li>
+      <li>自由度が高くカスタマイズしやすい</li>
+      <li>小規模なWebアプリ開発に向いている</li>
+      <li>必要な機能を後から追加できる（拡張性が高い）</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <span class="tag">③ コード例</span>
+    <h2>Flaskの基本コード例</h2>
+    <p>以下はシンプルなflaskの例である。</p>
+
+    <code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    </code>
+
+    <p>
+      このコードでは、ルートURL（/）にアクセスすると「Hello Flask!」と表示される。
+    </p>
+
+    <div class="highlight">
+      Flaskはシンプルな構造のため、小規模なWebアプリや学習用途に特に適していると考えられる。
+      一方で、大規模なシステム開発では機能が不足する場合があるため、
+      目的に応じて他のフレームワーク（例：Django）と使い分けることが重要である。
+    </div>
+
+  </div>
+
+  <div class="box">
+    <span class="tag">参考</span>
+    <h2>参考文献・参照元</h2>
+    <ul>
+      <li>
+        Flaskとは：
+        <a href="https://aiacademy.jp/media/?p=57" target="_blank">
+          https://flask.palletsprojects.com/
+        </a>
+     
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Flask Study Page</p>
+</footer>
+
+</body>
+</html>
